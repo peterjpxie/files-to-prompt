@@ -19,11 +19,11 @@ def allowed_by_gitignore(root: Path, file_path: Path) -> bool:
     abs_root = root.resolve()
     abs_file = file_path.resolve()
 
-    # Ensure file is under the provided root.
-    try:
-        _ = abs_file.relative_to(abs_root)
-    except ValueError:
-        raise ValueError(f"File {abs_file!r} is not under the root {abs_root!r}.")
+    # # Ensure file is under the provided root.
+    # try:
+    #     _ = abs_file.relative_to(abs_root)
+    # except ValueError:
+    #     raise ValueError(f"File {abs_file!r} is not under the root {abs_root!r}.")
 
     # Build a list of directories from the root to the file's directory.
     directories = [abs_root]

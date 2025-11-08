@@ -8,4 +8,4 @@ venv
 *.egg-info
 .DS_Store
 build/*
-!build/include/*
+!build/include/
